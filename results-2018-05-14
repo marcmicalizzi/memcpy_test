@@ -1,0 +1,162 @@
+Haswell Xeon E5-2687Wv3 1 cpu (1 empty socket) on Supermicro X10DAi with 32GB DDR4-2400 (10c/20t, 25 MB of L3 cache). But remember, the benchmark rotates through 100 pairs of 16MB buffers, so we probably aren't getting L3 cache hits.
+
+---------------------------------------------------------------------------
+Averaging 7000 copies of 16MB of data per function for operator new
+---------------------------------------------------------------------------
+std::memcpy                      averaging 2264.48 microseconds
+asm_memcpy (asm)                 averaging 2322.71 microseconds
+sse_memcpy (intrinsic)           averaging 1569.67 microseconds
+sse_memcpy (asm)                 averaging 1589.31 microseconds
+sse2_memcpy (intrinsic)          averaging 1561.19 microseconds
+sse2_memcpy (asm)                averaging 1664.18 microseconds
+mmx_memcpy (asm)                 averaging 2497.73 microseconds
+mmx2_memcpy (asm)                averaging 1626.68 microseconds
+avx_memcpy (intrinsic)           averaging 1625.12 microseconds
+avx_memcpy (asm)                 averaging 1592.58 microseconds
+avx512_memcpy (intrinsic)        unsupported on this CPU
+rep movsb (asm)                  averaging 2260.6 microseconds
+Haswell Dual Xeon E5-2687Wv3 2 cpu on Supermicro X10DAi with 64GB ram
+
+---------------------------------------------------------------------------
+Averaging 6900 copies of 16MB of data per function for VirtualAllocExNuma to NUMA node 0(local)
+---------------------------------------------------------------------------
+std::memcpy                      averaging 3179.8 microseconds
+asm_memcpy (asm)                 averaging 3177.15 microseconds
+sse_memcpy (intrinsic)           averaging 1633.87 microseconds
+sse_memcpy (asm)                 averaging 1663.8 microseconds
+sse2_memcpy (intrinsic)          averaging 1620.86 microseconds
+sse2_memcpy (asm)                averaging 1727.36 microseconds
+mmx_memcpy (asm)                 averaging 2623.07 microseconds
+mmx2_memcpy (asm)                averaging 1691.1 microseconds
+avx_memcpy (intrinsic)           averaging 1704.33 microseconds
+avx_memcpy (asm)                 averaging 1692.69 microseconds
+avx512_memcpy (intrinsic)        unsupported on this CPU
+rep movsb (asm)                  averaging 3185.84 microseconds
+---------------------------------------------------------------------------
+Averaging 6900 copies of 16MB of data per function for VirtualAllocExNuma to NUMA node 1
+---------------------------------------------------------------------------
+std::memcpy                      averaging 3992.46 microseconds
+asm_memcpy (asm)                 averaging 4039.11 microseconds
+sse_memcpy (intrinsic)           averaging 3174.69 microseconds
+sse_memcpy (asm)                 averaging 3129.18 microseconds
+sse2_memcpy (intrinsic)          averaging 3161.9 microseconds
+sse2_memcpy (asm)                averaging 3141.33 microseconds
+mmx_memcpy (asm)                 averaging 4010.17 microseconds
+mmx2_memcpy (asm)                averaging 3211.75 microseconds
+avx_memcpy (intrinsic)           averaging 3003.14 microseconds
+avx_memcpy (asm)                 averaging 2980.97 microseconds
+avx512_memcpy (intrinsic)        unsupported on this CPU
+rep movsb (asm)                  averaging 3987.91 microseconds
+---------------------------------------------------------------------------
+Averaging 6900 copies of 16MB of data per function for operator new
+---------------------------------------------------------------------------
+std::memcpy                      averaging 3172.95 microseconds
+asm_memcpy (asm)                 averaging 3173.5 microseconds
+sse_memcpy (intrinsic)           averaging 1623.84 microseconds
+sse_memcpy (asm)                 averaging 1657.07 microseconds
+sse2_memcpy (intrinsic)          averaging 1616.95 microseconds
+sse2_memcpy (asm)                averaging 1739.05 microseconds
+mmx_memcpy (asm)                 averaging 2623.71 microseconds
+mmx2_memcpy (asm)                averaging 1699.33 microseconds
+avx_memcpy (intrinsic)           averaging 1710.09 microseconds
+avx_memcpy (asm)                 averaging 1688.34 microseconds
+avx512_memcpy (intrinsic)        unsupported on this CPU
+rep movsb (asm)                  averaging 3175.14 microseconds
+Skylake Xeon Gold 6154 1 cpu (1 empty socket) on Supermicro X11DPH-I with 48GB DDR4-2666 (18c/36t, 24.75 MB of L3 cache)
+
+---------------------------------------------------------------------------
+Averaging 5000 copies of 16MB of data per function for operator new
+---------------------------------------------------------------------------
+std::memcpy                      averaging 1832.42 microseconds
+asm_memcpy (asm)                 averaging 1837.62 microseconds
+sse_memcpy (intrinsic)           averaging 1647.84 microseconds
+sse_memcpy (asm)                 averaging 1710.53 microseconds
+sse2_memcpy (intrinsic)          averaging 1645.54 microseconds
+sse2_memcpy (asm)                averaging 1794.36 microseconds
+mmx_memcpy (asm)                 averaging 2030.51 microseconds
+mmx2_memcpy (asm)                averaging 1816.82 microseconds
+avx_memcpy (intrinsic)           averaging 1686.49 microseconds
+avx_memcpy (asm)                 averaging 1716.15 microseconds
+avx512_memcpy (intrinsic)        averaging 1761.6 microseconds
+rep movsb (asm)                  averaging 1977.6 microseconds
+Skylake Xeon Gold 6154 2 cpu on Supermicro X11DPH-I with 96GB DDR4-2666
+
+---------------------------------------------------------------------------
+Averaging 4100 copies of 16MB of data per function for VirtualAllocExNuma to NUMA node 0(local)
+---------------------------------------------------------------------------
+std::memcpy                      averaging 3131.6 microseconds
+asm_memcpy (asm)                 averaging 3070.57 microseconds
+sse_memcpy (intrinsic)           averaging 3297.72 microseconds
+sse_memcpy (asm)                 averaging 3423.38 microseconds
+sse2_memcpy (intrinsic)          averaging 3274.31 microseconds
+sse2_memcpy (asm)                averaging 3413.48 microseconds
+mmx_memcpy (asm)                 averaging 2069.53 microseconds
+mmx2_memcpy (asm)                averaging 3694.91 microseconds
+avx_memcpy (intrinsic)           averaging 3118.75 microseconds
+avx_memcpy (asm)                 averaging 3224.36 microseconds
+avx512_memcpy (intrinsic)        averaging 3156.56 microseconds
+rep movsb (asm)                  averaging 3155.36 microseconds
+---------------------------------------------------------------------------
+Averaging 4100 copies of 16MB of data per function for VirtualAllocExNuma to NUMA node 1
+---------------------------------------------------------------------------
+std::memcpy                      averaging 5309.77 microseconds
+asm_memcpy (asm)                 averaging 5330.78 microseconds
+sse_memcpy (intrinsic)           averaging 2350.61 microseconds
+sse_memcpy (asm)                 averaging 2402.57 microseconds
+sse2_memcpy (intrinsic)          averaging 2338.61 microseconds
+sse2_memcpy (asm)                averaging 2475.51 microseconds
+mmx_memcpy (asm)                 averaging 2883.97 microseconds
+mmx2_memcpy (asm)                averaging 2517.69 microseconds
+avx_memcpy (intrinsic)           averaging 2356.07 microseconds
+avx_memcpy (asm)                 averaging 2415.22 microseconds
+avx512_memcpy (intrinsic)        averaging 2487.01 microseconds
+rep movsb (asm)                  averaging 5372.98 microseconds
+---------------------------------------------------------------------------
+Averaging 4100 copies of 16MB of data per function for operator new
+---------------------------------------------------------------------------
+std::memcpy                      averaging 3075.1 microseconds
+asm_memcpy (asm)                 averaging 3061.97 microseconds
+sse_memcpy (intrinsic)           averaging 3281.17 microseconds
+sse_memcpy (asm)                 averaging 3421.38 microseconds
+sse2_memcpy (intrinsic)          averaging 3268.79 microseconds
+sse2_memcpy (asm)                averaging 3435.76 microseconds
+mmx_memcpy (asm)                 averaging 2061.27 microseconds
+mmx2_memcpy (asm)                averaging 3694.48 microseconds
+avx_memcpy (intrinsic)           averaging 3111.16 microseconds
+avx_memcpy (asm)                 averaging 3227.45 microseconds
+avx512_memcpy (intrinsic)        averaging 3148.65 microseconds
+rep movsb (asm)                  averaging 2967.45 microseconds
+Skylake-X i9-7940X on ASUS ROG Rampage VI Extreme with 32GB DDR4-4266 (14c/28t, 19.25 MB of L3 cache) (overclocked to 3.8GHz/4.4GHz turbo, DDR at 4040MHz, Target AVX Frequency 3737MHz, Target AVX-512 Frequency 3535MHz, target cache frequency 2424MHz)
+
+---------------------------------------------------------------------------
+Averaging 6500 copies of 16MB of data per function for operator new
+---------------------------------------------------------------------------
+std::memcpy                      averaging 1750.87 microseconds
+asm_memcpy (asm)                 averaging 1748.22 microseconds
+sse_memcpy (intrinsic)           averaging 1743.39 microseconds
+sse_memcpy (asm)                 averaging 3120.18 microseconds
+sse2_memcpy (intrinsic)          averaging 1743.37 microseconds
+sse2_memcpy (asm)                averaging 2868.52 microseconds
+mmx_memcpy (asm)                 averaging 2255.17 microseconds
+mmx2_memcpy (asm)                averaging 3434.58 microseconds
+avx_memcpy (intrinsic)           averaging 1698.49 microseconds
+avx_memcpy (asm)                 averaging 2840.65 microseconds
+avx512_memcpy (intrinsic)        averaging 1670.05 microseconds
+rep movsb (asm)                  averaging 1718.77 microseconds
+Broadwell i7-6800k on ASUS X99 with 24GB DDR4-2400 (6c/12t, 15 MB of L3 cache)
+
+---------------------------------------------------------------------------
+Averaging 64900 copies of 16MB of data per function for operator new
+---------------------------------------------------------------------------
+std::memcpy                      averaging 2522.1 microseconds
+asm_memcpy (asm)                 averaging 2615.92 microseconds
+sse_memcpy (intrinsic)           averaging 1621.81 microseconds
+sse_memcpy (asm)                 averaging 1669.39 microseconds
+sse2_memcpy (intrinsic)          averaging 1617.04 microseconds
+sse2_memcpy (asm)                averaging 1719.06 microseconds
+mmx_memcpy (asm)                 averaging 3021.02 microseconds
+mmx2_memcpy (asm)                averaging 1691.68 microseconds
+avx_memcpy (intrinsic)           averaging 1654.41 microseconds
+avx_memcpy (asm)                 averaging 1666.84 microseconds
+avx512_memcpy (intrinsic)        unsupported on this CPU
+rep movsb (asm)                  averaging 2520.13 microseconds
