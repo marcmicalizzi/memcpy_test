@@ -1,0 +1,534 @@
+**Haswell Dual Xeon E5-2687Wv3 2 cpu on Supermicro X10DAi with 64GB ram**
+
+    ---------------------------------------------------------------------------
+    Averaging 3100 copies of 16MB of data per function for VirtualAllocExNuma to NUMA node 0(local)
+    ---------------------------------------------------------------------------
+    std::memcpy                                              averaging 3179.63 microseconds
+    asm_memcpy (asm)                                         averaging 3198.5 microseconds
+    sse_memcpy (movaps/movntps/no prefetch)                  averaging 1676.74 microseconds
+    sse_memcpy (movaps/movntps/prefetchnta)                  averaging 1717.76 microseconds
+    sse_memcpy (movaps/movntps/prefetcht0)                   averaging 1676.1 microseconds
+    sse_memcpy (movaps/movaps/no prefetch)                   averaging 2660.69 microseconds
+    sse_memcpy (movaps/movaps/prefetchnta)                   averaging 2734.85 microseconds
+    sse_memcpy (movaps/movaps/prefetcht0)                    averaging 2679.27 microseconds
+    sse2_memcpy (movapd/movntpd/no prefetch)                 averaging 1675.31 microseconds
+    sse2_memcpy (movapd/movntpd/prefetchnta)                 averaging 1871.45 microseconds
+    sse2_memcpy (movapd/movntpd/prefetcht0)                  averaging 1815.9 microseconds
+    sse2_memcpy (movapd/movapd/no prefetch)                  averaging 2661.16 microseconds
+    sse2_memcpy (movapd/movapd/prefetchnta)                  averaging 2969.11 microseconds
+    sse2_memcpy (movapd/movapd/prefetcht0)                   averaging 2918.23 microseconds
+    sse41_memcpy (movntdqa/movntdq/no prefetch)              averaging 1680.76 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetchnta)              averaging 1716.71 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetcht0)               averaging 1676.86 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/no prefetch)           averaging 2659.32 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetchnta)           averaging 2730.17 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetcht0)            averaging 2680.72 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/no prefetch)        averaging 1722.21 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetchnta)        averaging 1713.66 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetcht0)         averaging 1710.86 microseconds
+    avx_memcpy (vmovaps/vmovaps/no prefetch)                 averaging 2678.38 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetchnta)                 averaging 4601.88 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetcht0)                  averaging 4598.54 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/no prefetch)           unsupported on this CPU
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetchnta)           unsupported on this CPU
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetcht0)            unsupported on this CPU
+    avx512_memcpy (vmovaps/vmovaps/no prefetch)              unsupported on this CPU
+    avx512_memcpy (vmovaps/vmovaps/prefetchnta)              unsupported on this CPU
+    avx512_memcpy (vmovaps/vmovaps/prefetcht0)               unsupported on this CPU
+    __movsb (intrinsic)                                      averaging 3206.09 microseconds
+    ---------------------------------------------------------------------------
+    Averaging 3100 copies of 16MB of data per function for VirtualAllocExNuma to NUMA node 1
+    ---------------------------------------------------------------------------
+    std::memcpy                                              averaging 3982.71 microseconds
+    asm_memcpy (asm)                                         averaging 3993.85 microseconds
+    sse_memcpy (movaps/movntps/no prefetch)                  averaging 3107.14 microseconds
+    sse_memcpy (movaps/movntps/prefetchnta)                  averaging 3036.34 microseconds
+    sse_memcpy (movaps/movntps/prefetcht0)                   averaging 3020.23 microseconds
+    sse_memcpy (movaps/movaps/no prefetch)                   averaging 3837.01 microseconds
+    sse_memcpy (movaps/movaps/prefetchnta)                   averaging 3828.85 microseconds
+    sse_memcpy (movaps/movaps/prefetcht0)                    averaging 3791.88 microseconds
+    sse2_memcpy (movapd/movntpd/no prefetch)                 averaging 3103.15 microseconds
+    sse2_memcpy (movapd/movntpd/prefetchnta)                 averaging 3177.05 microseconds
+    sse2_memcpy (movapd/movntpd/prefetcht0)                  averaging 3159.65 microseconds
+    sse2_memcpy (movapd/movapd/no prefetch)                  averaging 3828.18 microseconds
+    sse2_memcpy (movapd/movapd/prefetchnta)                  averaging 4041.74 microseconds
+    sse2_memcpy (movapd/movapd/prefetcht0)                   averaging 4011.19 microseconds
+    sse41_memcpy (movntdqa/movntdq/no prefetch)              averaging 3108.69 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetchnta)              averaging 3037.27 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetcht0)               averaging 3026.4 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/no prefetch)           averaging 3834.19 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetchnta)           averaging 3828.23 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetcht0)            averaging 3802.07 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/no prefetch)        averaging 2969.45 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetchnta)        averaging 2949.19 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetcht0)         averaging 2946.3 microseconds
+    avx_memcpy (vmovaps/vmovaps/no prefetch)                 averaging 3788.77 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetchnta)                 averaging 6758.04 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetcht0)                  averaging 6755.03 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/no prefetch)           unsupported on this CPU
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetchnta)           unsupported on this CPU
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetcht0)            unsupported on this CPU
+    avx512_memcpy (vmovaps/vmovaps/no prefetch)              unsupported on this CPU
+    avx512_memcpy (vmovaps/vmovaps/prefetchnta)              unsupported on this CPU
+    avx512_memcpy (vmovaps/vmovaps/prefetcht0)               unsupported on this CPU
+    __movsb (intrinsic)                                      averaging 3980.29 microseconds
+    ---------------------------------------------------------------------------
+    Averaging 3100 copies of 16MB of data per function for operator new
+    ---------------------------------------------------------------------------
+    std::memcpy                                              averaging 3196.02 microseconds
+    asm_memcpy (asm)                                         averaging 3191.31 microseconds
+    sse_memcpy (movaps/movntps/no prefetch)                  averaging 1673.21 microseconds
+    sse_memcpy (movaps/movntps/prefetchnta)                  averaging 1713.86 microseconds
+    sse_memcpy (movaps/movntps/prefetcht0)                   averaging 1674.52 microseconds
+    sse_memcpy (movaps/movaps/no prefetch)                   averaging 2664.7 microseconds
+    sse_memcpy (movaps/movaps/prefetchnta)                   averaging 2725.82 microseconds
+    sse_memcpy (movaps/movaps/prefetcht0)                    averaging 2683.12 microseconds
+    sse2_memcpy (movapd/movntpd/no prefetch)                 averaging 1672.19 microseconds
+    sse2_memcpy (movapd/movntpd/prefetchnta)                 averaging 1873.09 microseconds
+    sse2_memcpy (movapd/movntpd/prefetcht0)                  averaging 1811.79 microseconds
+    sse2_memcpy (movapd/movapd/no prefetch)                  averaging 2663.22 microseconds
+    sse2_memcpy (movapd/movapd/prefetchnta)                  averaging 2963.88 microseconds
+    sse2_memcpy (movapd/movapd/prefetcht0)                   averaging 2919.74 microseconds
+    sse41_memcpy (movntdqa/movntdq/no prefetch)              averaging 1674.19 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetchnta)              averaging 1716.76 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetcht0)               averaging 1674.91 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/no prefetch)           averaging 2662.59 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetchnta)           averaging 2732.81 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetcht0)            averaging 2687.43 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/no prefetch)        averaging 1720.9 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetchnta)        averaging 1718.5 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetcht0)         averaging 1717.64 microseconds
+    avx_memcpy (vmovaps/vmovaps/no prefetch)                 averaging 2697.44 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetchnta)                 averaging 4590.93 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetcht0)                  averaging 4579.46 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/no prefetch)           unsupported on this CPU
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetchnta)           unsupported on this CPU
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetcht0)            unsupported on this CPU
+    avx512_memcpy (vmovaps/vmovaps/no prefetch)              unsupported on this CPU
+    avx512_memcpy (vmovaps/vmovaps/prefetchnta)              unsupported on this CPU
+    avx512_memcpy (vmovaps/vmovaps/prefetcht0)               unsupported on this CPU
+    __movsb (intrinsic)                                      averaging 3172.75 microseconds
+
+**Haswell Xeon E5-2687Wv3 1 cpu (1 empty socket) on Supermicro X10DAi with 32GB ram**
+
+    ---------------------------------------------------------------------------
+    Averaging 9300 copies of 16MB of data per function for operator new
+    ---------------------------------------------------------------------------
+    std::memcpy                                              averaging 2273.18 microseconds
+    asm_memcpy (asm)                                         averaging 2317.4 microseconds
+    sse_memcpy (movaps/movntps/no prefetch)                  averaging 1555.04 microseconds
+    sse_memcpy (movaps/movntps/prefetchnta)                  averaging 1582.56 microseconds
+    sse_memcpy (movaps/movntps/prefetcht0)                   averaging 1541.03 microseconds
+    sse_memcpy (movaps/movaps/no prefetch)                   averaging 2498.5 microseconds
+    sse_memcpy (movaps/movaps/prefetchnta)                   averaging 2577.92 microseconds
+    sse_memcpy (movaps/movaps/prefetcht0)                    averaging 2520.76 microseconds
+    sse2_memcpy (movapd/movntpd/no prefetch)                 averaging 1553.1 microseconds
+    sse2_memcpy (movapd/movntpd/prefetchnta)                 averaging 1745.87 microseconds
+    sse2_memcpy (movapd/movntpd/prefetcht0)                  averaging 1692.68 microseconds
+    sse2_memcpy (movapd/movapd/no prefetch)                  averaging 2497.05 microseconds
+    sse2_memcpy (movapd/movapd/prefetchnta)                  averaging 2813.83 microseconds
+    sse2_memcpy (movapd/movapd/prefetcht0)                   averaging 2761.96 microseconds
+    sse41_memcpy (movntdqa/movntdq/no prefetch)              averaging 1557.68 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetchnta)              averaging 1602.88 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetcht0)               averaging 1549.82 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/no prefetch)           averaging 2498.47 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetchnta)           averaging 2577.42 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetcht0)            averaging 2520.82 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/no prefetch)        averaging 1607.72 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetchnta)        averaging 1592.06 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetcht0)         averaging 1591.54 microseconds
+    avx_memcpy (vmovaps/vmovaps/no prefetch)                 averaging 2533.13 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetchnta)                 averaging 4311.35 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetcht0)                  averaging 4297.82 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/no prefetch)           unsupported on this CPU
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetchnta)           unsupported on this CPU
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetcht0)            unsupported on this CPU
+    avx512_memcpy (vmovaps/vmovaps/no prefetch)              unsupported on this CPU
+    avx512_memcpy (vmovaps/vmovaps/prefetchnta)              unsupported on this CPU
+    avx512_memcpy (vmovaps/vmovaps/prefetcht0)               unsupported on this CPU
+    __movsb (intrinsic)                                      averaging 2266.61 microseconds
+
+**Skylake Xeon Gold 6154 2 cpu on Supermicro X11DPH-I with 96GB DDR4-2666**
+
+
+*LLC Prefetch Enabled*
+
+    ---------------------------------------------------------------------------
+    Averaging 1600 copies of 16MB of data per function for VirtualAllocExNuma to NUMA node 0(local)
+    ---------------------------------------------------------------------------
+    std::memcpy                                              averaging 3563.12 microseconds
+    asm_memcpy (asm)                                         averaging 3142.91 microseconds
+    sse_memcpy (movaps/movntps/no prefetch)                  averaging 3236.78 microseconds
+    sse_memcpy (movaps/movntps/prefetchnta)                  averaging 3424.43 microseconds
+    sse_memcpy (movaps/movntps/prefetcht0)                   averaging 3289.14 microseconds
+    sse_memcpy (movaps/movaps/no prefetch)                   averaging 2147.52 microseconds
+    sse_memcpy (movaps/movaps/prefetchnta)                   averaging 2051.76 microseconds
+    sse_memcpy (movaps/movaps/prefetcht0)                    averaging 2096.33 microseconds
+    sse2_memcpy (movapd/movntpd/no prefetch)                 averaging 3231.89 microseconds
+    sse2_memcpy (movapd/movntpd/prefetchnta)                 averaging 3516.3 microseconds
+    sse2_memcpy (movapd/movntpd/prefetcht0)                  averaging 3458.73 microseconds
+    sse2_memcpy (movapd/movapd/no prefetch)                  averaging 2135.4 microseconds
+    sse2_memcpy (movapd/movapd/prefetchnta)                  averaging 2382.21 microseconds
+    sse2_memcpy (movapd/movapd/prefetcht0)                   averaging 2446.74 microseconds
+    sse41_memcpy (movntdqa/movntdq/no prefetch)              averaging 3241.99 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetchnta)              averaging 3434.66 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetcht0)               averaging 3277.22 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/no prefetch)           averaging 2146.09 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetchnta)           averaging 2053.84 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetcht0)            averaging 2099.31 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/no prefetch)        averaging 3051.68 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetchnta)        averaging 3166.45 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetcht0)         averaging 3165.77 microseconds
+    avx_memcpy (vmovaps/vmovaps/no prefetch)                 averaging 2203.64 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetchnta)                 averaging 3726.5 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetcht0)                  averaging 3944.85 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/no prefetch)           averaging 3114.39 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetchnta)           averaging 3221.88 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetcht0)            averaging 3113.05 microseconds
+    avx512_memcpy (vmovaps/vmovaps/no prefetch)              averaging 2407.01 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetchnta)              averaging 2570.19 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetcht0)               averaging 2557.18 microseconds
+    __movsb (intrinsic)                                      averaging 3158.84 microseconds
+    ---------------------------------------------------------------------------
+    Averaging 1600 copies of 16MB of data per function for VirtualAllocExNuma to NUMA node 1
+    ---------------------------------------------------------------------------
+    std::memcpy                                              averaging 5618.76 microseconds
+    asm_memcpy (asm)                                         averaging 5701.01 microseconds
+    sse_memcpy (movaps/movntps/no prefetch)                  averaging 2611.46 microseconds
+    sse_memcpy (movaps/movntps/prefetchnta)                  averaging 2505.07 microseconds
+    sse_memcpy (movaps/movntps/prefetcht0)                   averaging 2402.36 microseconds
+    sse_memcpy (movaps/movaps/no prefetch)                   averaging 3077 microseconds
+    sse_memcpy (movaps/movaps/prefetchnta)                   averaging 2852.93 microseconds
+    sse_memcpy (movaps/movaps/prefetcht0)                    averaging 2908.69 microseconds
+    sse2_memcpy (movapd/movntpd/no prefetch)                 averaging 2501.93 microseconds
+    sse2_memcpy (movapd/movntpd/prefetchnta)                 averaging 2661.98 microseconds
+    sse2_memcpy (movapd/movntpd/prefetcht0)                  averaging 2686.98 microseconds
+    sse2_memcpy (movapd/movapd/no prefetch)                  averaging 3035.05 microseconds
+    sse2_memcpy (movapd/movapd/prefetchnta)                  averaging 3276.6 microseconds
+    sse2_memcpy (movapd/movapd/prefetcht0)                   averaging 3332.36 microseconds
+    sse41_memcpy (movntdqa/movntdq/no prefetch)              averaging 2543.17 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetchnta)              averaging 2514.59 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetcht0)               averaging 2410.95 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/no prefetch)           averaging 3059.72 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetchnta)           averaging 2842.45 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetcht0)            averaging 2889.29 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/no prefetch)        averaging 2400.17 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetchnta)        averaging 2431.74 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetcht0)         averaging 2443.64 microseconds
+    avx_memcpy (vmovaps/vmovaps/no prefetch)                 averaging 3136.78 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetchnta)                 averaging 5747.68 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetcht0)                  averaging 5790.39 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/no prefetch)           averaging 2592.68 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetchnta)           averaging 2725.17 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetcht0)            averaging 2654.88 microseconds
+    avx512_memcpy (vmovaps/vmovaps/no prefetch)              averaging 3354.12 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetchnta)              averaging 3670.84 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetcht0)               averaging 3686.19 microseconds
+    __movsb (intrinsic)                                      averaging 5947.12 microseconds
+    ---------------------------------------------------------------------------
+    Averaging 1600 copies of 16MB of data per function for operator new
+    ---------------------------------------------------------------------------
+    std::memcpy                                              averaging 3136.9 microseconds
+    asm_memcpy (asm)                                         averaging 3136.1 microseconds
+    sse_memcpy (movaps/movntps/no prefetch)                  averaging 3229.94 microseconds
+    sse_memcpy (movaps/movntps/prefetchnta)                  averaging 3415.97 microseconds
+    sse_memcpy (movaps/movntps/prefetcht0)                   averaging 3267.41 microseconds
+    sse_memcpy (movaps/movaps/no prefetch)                   averaging 2178.42 microseconds
+    sse_memcpy (movaps/movaps/prefetchnta)                   averaging 2039.06 microseconds
+    sse_memcpy (movaps/movaps/prefetcht0)                    averaging 2131.47 microseconds
+    sse2_memcpy (movapd/movntpd/no prefetch)                 averaging 3226.43 microseconds
+    sse2_memcpy (movapd/movntpd/prefetchnta)                 averaging 3523.82 microseconds
+    sse2_memcpy (movapd/movntpd/prefetcht0)                  averaging 3471.4 microseconds
+    sse2_memcpy (movapd/movapd/no prefetch)                  averaging 2167.81 microseconds
+    sse2_memcpy (movapd/movapd/prefetchnta)                  averaging 2405.64 microseconds
+    sse2_memcpy (movapd/movapd/prefetcht0)                   averaging 2490.46 microseconds
+    sse41_memcpy (movntdqa/movntdq/no prefetch)              averaging 3220.37 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetchnta)              averaging 3411.48 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetcht0)               averaging 3255.39 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/no prefetch)           averaging 2171.38 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetchnta)           averaging 2029.43 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetcht0)            averaging 2131.65 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/no prefetch)        averaging 3056.23 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetchnta)        averaging 3156.69 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetcht0)         averaging 3163.17 microseconds
+    avx_memcpy (vmovaps/vmovaps/no prefetch)                 averaging 2218.76 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetchnta)                 averaging 3706.12 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetcht0)                  averaging 3934.02 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/no prefetch)           averaging 3095.29 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetchnta)           averaging 3279.78 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetcht0)            averaging 3160 microseconds
+    avx512_memcpy (vmovaps/vmovaps/no prefetch)              averaging 2406.13 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetchnta)              averaging 2661.52 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetcht0)               averaging 2674.83 microseconds
+    __movsb (intrinsic)                                      averaging 3499.55 microseconds
+
+*LLC Prefetch Disabled*
+
+    ---------------------------------------------------------------------------
+    Averaging 1200 copies of 16MB of data per function for VirtualAllocExNuma to NUMA node 0(local)
+    ---------------------------------------------------------------------------
+    std::memcpy                                              averaging 3113.28 microseconds
+    asm_memcpy (asm)                                         averaging 3214.14 microseconds
+    sse_memcpy (movaps/movntps/no prefetch)                  averaging 3199.48 microseconds
+    sse_memcpy (movaps/movntps/prefetchnta)                  averaging 4871.39 microseconds
+    sse_memcpy (movaps/movntps/prefetcht0)                   averaging 3206.8 microseconds
+    sse_memcpy (movaps/movaps/no prefetch)                   averaging 2448.63 microseconds
+    sse_memcpy (movaps/movaps/prefetchnta)                   averaging 3323.24 microseconds
+    sse_memcpy (movaps/movaps/prefetcht0)                    averaging 2566.29 microseconds
+    sse2_memcpy (movapd/movntpd/no prefetch)                 averaging 3137.55 microseconds
+    sse2_memcpy (movapd/movntpd/prefetchnta)                 averaging 4178.33 microseconds
+    sse2_memcpy (movapd/movntpd/prefetcht0)                  averaging 3346.43 microseconds
+    sse2_memcpy (movapd/movapd/no prefetch)                  averaging 2430.06 microseconds
+    sse2_memcpy (movapd/movapd/prefetchnta)                  averaging 3293.77 microseconds
+    sse2_memcpy (movapd/movapd/prefetcht0)                   averaging 2768.81 microseconds
+    sse41_memcpy (movntdqa/movntdq/no prefetch)              averaging 3132.01 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetchnta)              averaging 4857.52 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetcht0)               averaging 3185.75 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/no prefetch)           averaging 2444.2 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetchnta)           averaging 3324.28 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetcht0)            averaging 2415.37 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/no prefetch)        averaging 3012.58 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetchnta)        averaging 4357.96 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetcht0)         averaging 4363.68 microseconds
+    avx_memcpy (vmovaps/vmovaps/no prefetch)                 averaging 2426.44 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetchnta)                 averaging 4315.42 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetcht0)                  averaging 4427.66 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/no prefetch)           averaging 3074.34 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetchnta)           averaging 3881.65 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetcht0)            averaging 3080.7 microseconds
+    avx512_memcpy (vmovaps/vmovaps/no prefetch)              averaging 2562.33 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetchnta)              averaging 3095.15 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetcht0)               averaging 2650.03 microseconds
+    __movsb (intrinsic)                                      averaging 3139.85 microseconds
+    ---------------------------------------------------------------------------
+    Averaging 1200 copies of 16MB of data per function for VirtualAllocExNuma to NUMA node 1
+    ---------------------------------------------------------------------------
+    std::memcpy                                              averaging 5727.69 microseconds
+    asm_memcpy (asm)                                         averaging 5524.66 microseconds
+    sse_memcpy (movaps/movntps/no prefetch)                  averaging 2608.51 microseconds
+    sse_memcpy (movaps/movntps/prefetchnta)                  averaging 4114.4 microseconds
+    sse_memcpy (movaps/movntps/prefetcht0)                   averaging 2503 microseconds
+    sse_memcpy (movaps/movaps/no prefetch)                   averaging 3648.32 microseconds
+    sse_memcpy (movaps/movaps/prefetchnta)                   averaging 4834.27 microseconds
+    sse_memcpy (movaps/movaps/prefetcht0)                    averaging 3748.33 microseconds
+    sse2_memcpy (movapd/movntpd/no prefetch)                 averaging 2570.13 microseconds
+    sse2_memcpy (movapd/movntpd/prefetchnta)                 averaging 3741.22 microseconds
+    sse2_memcpy (movapd/movntpd/prefetcht0)                  averaging 2769.9 microseconds
+    sse2_memcpy (movapd/movapd/no prefetch)                  averaging 3644.88 microseconds
+    sse2_memcpy (movapd/movapd/prefetchnta)                  averaging 4807.58 microseconds
+    sse2_memcpy (movapd/movapd/prefetcht0)                   averaging 3978.69 microseconds
+    sse41_memcpy (movntdqa/movntdq/no prefetch)              averaging 2603.57 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetchnta)              averaging 4134.05 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetcht0)               averaging 2487.97 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/no prefetch)           averaging 3645.89 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetchnta)           averaging 4819.84 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetcht0)            averaging 3564.4 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/no prefetch)        averaging 2419.21 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetchnta)        averaging 3673.28 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetcht0)         averaging 3686.02 microseconds
+    avx_memcpy (vmovaps/vmovaps/no prefetch)                 averaging 3663.47 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetchnta)                 averaging 6732.3 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetcht0)                  averaging 6623.53 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/no prefetch)           averaging 2552.99 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetchnta)           averaging 3389.12 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetcht0)            averaging 2605 microseconds
+    avx512_memcpy (vmovaps/vmovaps/no prefetch)              averaging 3782.7 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetchnta)              averaging 4562.45 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetcht0)               averaging 3942.96 microseconds
+    __movsb (intrinsic)                                      averaging 5560.51 microseconds
+    ---------------------------------------------------------------------------
+    Averaging 1200 copies of 16MB of data per function for operator new
+    ---------------------------------------------------------------------------
+    std::memcpy                                              averaging 3091.93 microseconds
+    asm_memcpy (asm)                                         averaging 3090.91 microseconds
+    sse_memcpy (movaps/movntps/no prefetch)                  averaging 3140.2 microseconds
+    sse_memcpy (movaps/movntps/prefetchnta)                  averaging 4881.29 microseconds
+    sse_memcpy (movaps/movntps/prefetcht0)                   averaging 3177.73 microseconds
+    sse_memcpy (movaps/movaps/no prefetch)                   averaging 2560.61 microseconds
+    sse_memcpy (movaps/movaps/prefetchnta)                   averaging 3278.3 microseconds
+    sse_memcpy (movaps/movaps/prefetcht0)                    averaging 2670.28 microseconds
+    sse2_memcpy (movapd/movntpd/no prefetch)                 averaging 3153.88 microseconds
+    sse2_memcpy (movapd/movntpd/prefetchnta)                 averaging 4217.19 microseconds
+    sse2_memcpy (movapd/movntpd/prefetcht0)                  averaging 3360.04 microseconds
+    sse2_memcpy (movapd/movapd/no prefetch)                  averaging 2557.29 microseconds
+    sse2_memcpy (movapd/movapd/prefetchnta)                  averaging 3357.7 microseconds
+    sse2_memcpy (movapd/movapd/prefetcht0)                   averaging 2863.59 microseconds
+    sse41_memcpy (movntdqa/movntdq/no prefetch)              averaging 3126.87 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetchnta)              averaging 4908.12 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetcht0)               averaging 3177.55 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/no prefetch)           averaging 2572.46 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetchnta)           averaging 3297.9 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetcht0)            averaging 2500.63 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/no prefetch)        averaging 3023.99 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetchnta)        averaging 4370.9 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetcht0)         averaging 4369 microseconds
+    avx_memcpy (vmovaps/vmovaps/no prefetch)                 averaging 2522.04 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetchnta)                 averaging 4389.37 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetcht0)                  averaging 4465.89 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/no prefetch)           averaging 3059.99 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetchnta)           averaging 3885.1 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetcht0)            averaging 3127.49 microseconds
+    avx512_memcpy (vmovaps/vmovaps/no prefetch)              averaging 2677.81 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetchnta)              averaging 3191.64 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetcht0)               averaging 2814.48 microseconds
+    __movsb (intrinsic)                                      averaging 3124.04 microseconds
+
+**Skylake Xeon Gold 6154 1 cpu (1 empty socket) on Supermicro X11DPH-I with 48GB DDR4-2666**
+
+
+*LLC Prefetch Enabled*
+
+    ---------------------------------------------------------------------------
+    Averaging 4500 copies of 16MB of data per function for operator new
+    ---------------------------------------------------------------------------
+    std::memcpy                                              averaging 1876.23 microseconds
+    asm_memcpy (asm)                                         averaging 1876.24 microseconds
+    sse_memcpy (movaps/movntps/no prefetch)                  averaging 1741.03 microseconds
+    sse_memcpy (movaps/movntps/prefetchnta)                  averaging 1807.84 microseconds
+    sse_memcpy (movaps/movntps/prefetcht0)                   averaging 1728.05 microseconds
+    sse_memcpy (movaps/movaps/no prefetch)                   averaging 2035.35 microseconds
+    sse_memcpy (movaps/movaps/prefetchnta)                   averaging 1934.64 microseconds
+    sse_memcpy (movaps/movaps/prefetcht0)                    averaging 2033.18 microseconds
+    sse2_memcpy (movapd/movntpd/no prefetch)                 averaging 1745.31 microseconds
+    sse2_memcpy (movapd/movntpd/prefetchnta)                 averaging 2049.67 microseconds
+    sse2_memcpy (movapd/movntpd/prefetcht0)                  averaging 2041.02 microseconds
+    sse2_memcpy (movapd/movapd/no prefetch)                  averaging 2032.07 microseconds
+    sse2_memcpy (movapd/movapd/prefetchnta)                  averaging 2273.9 microseconds
+    sse2_memcpy (movapd/movapd/prefetcht0)                   averaging 2383.95 microseconds
+    sse41_memcpy (movntdqa/movntdq/no prefetch)              averaging 1744.65 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetchnta)              averaging 1812.09 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetcht0)               averaging 1731.24 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/no prefetch)           averaging 2034.34 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetchnta)           averaging 1936.6 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetcht0)            averaging 2021.06 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/no prefetch)        averaging 1725.4 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetchnta)        averaging 1761.23 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetcht0)         averaging 1756.51 microseconds
+    avx_memcpy (vmovaps/vmovaps/no prefetch)                 averaging 2055.07 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetchnta)                 averaging 3587.83 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetcht0)                  averaging 3829.69 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/no prefetch)           averaging 1821.94 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetchnta)           averaging 1983.1 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetcht0)            averaging 1886.56 microseconds
+    avx512_memcpy (vmovaps/vmovaps/no prefetch)              averaging 2331.14 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetchnta)              averaging 2555.55 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetcht0)               averaging 2479.48 microseconds
+    __movsb (intrinsic)                                      averaging 2226.97 microseconds
+
+
+*LLC Prefetch Disabled*
+
+    ---------------------------------------------------------------------------
+    Averaging 1800 copies of 16MB of data per function for operator new
+    ---------------------------------------------------------------------------
+    std::memcpy                                              averaging 1881.32 microseconds
+    asm_memcpy (asm)                                         averaging 1874.35 microseconds
+    sse_memcpy (movaps/movntps/no prefetch)                  averaging 1671.52 microseconds
+    sse_memcpy (movaps/movntps/prefetchnta)                  averaging 3171.77 microseconds
+    sse_memcpy (movaps/movntps/prefetcht0)                   averaging 1705.47 microseconds
+    sse_memcpy (movaps/movaps/no prefetch)                   averaging 2434.39 microseconds
+    sse_memcpy (movaps/movaps/prefetchnta)                   averaging 3182.39 microseconds
+    sse_memcpy (movaps/movaps/prefetcht0)                    averaging 2400.37 microseconds
+    sse2_memcpy (movapd/movntpd/no prefetch)                 averaging 1665.54 microseconds
+    sse2_memcpy (movapd/movntpd/prefetchnta)                 averaging 2691.69 microseconds
+    sse2_memcpy (movapd/movntpd/prefetcht0)                  averaging 2007.22 microseconds
+    sse2_memcpy (movapd/movapd/no prefetch)                  averaging 2413 microseconds
+    sse2_memcpy (movapd/movapd/prefetchnta)                  averaging 3190.03 microseconds
+    sse2_memcpy (movapd/movapd/prefetcht0)                   averaging 2726.66 microseconds
+    sse41_memcpy (movntdqa/movntdq/no prefetch)              averaging 1675.61 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetchnta)              averaging 3169.51 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetcht0)               averaging 1670.58 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/no prefetch)           averaging 2414.61 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetchnta)           averaging 3150.4 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetcht0)            averaging 2384.99 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/no prefetch)        averaging 1660.23 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetchnta)        averaging 2786.2 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetcht0)         averaging 2786.48 microseconds
+    avx_memcpy (vmovaps/vmovaps/no prefetch)                 averaging 2351 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetchnta)                 averaging 4203.3 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetcht0)                  averaging 4278.89 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/no prefetch)           averaging 1764.87 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetchnta)           averaging 2430.76 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetcht0)            averaging 1832.34 microseconds
+    avx512_memcpy (vmovaps/vmovaps/no prefetch)              averaging 2450.77 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetchnta)              averaging 3082.27 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetcht0)               averaging 2538.56 microseconds
+    __movsb (intrinsic)                                      averaging 2152.78 microseconds
+
+**Skylake-X i9-7940X on ASUS ROG Rampage VI Extreme with 32GB DDR4-4266** 
+
+    ---------------------------------------------------------------------------
+    Averaging 500 copies of 16MB of data per function for operator new
+    ---------------------------------------------------------------------------
+    std::memcpy                                              averaging 1705.34 microseconds
+    asm_memcpy (asm)                                         averaging 1684.9 microseconds
+    sse_memcpy (movaps/movntps/no prefetch)                  averaging 1725.89 microseconds
+    sse_memcpy (movaps/movntps/prefetchnta)                  averaging 3129.12 microseconds
+    sse_memcpy (movaps/movntps/prefetcht0)                   averaging 1708.39 microseconds
+    sse_memcpy (movaps/movaps/no prefetch)                   averaging 2094.23 microseconds
+    sse_memcpy (movaps/movaps/prefetchnta)                   averaging 2760.85 microseconds
+    sse_memcpy (movaps/movaps/prefetcht0)                    averaging 2039.94 microseconds
+    sse2_memcpy (movapd/movntpd/no prefetch)                 averaging 1730.31 microseconds
+    sse2_memcpy (movapd/movntpd/prefetchnta)                 averaging 2601.7 microseconds
+    sse2_memcpy (movapd/movntpd/prefetcht0)                  averaging 2048.48 microseconds
+    sse2_memcpy (movapd/movapd/no prefetch)                  averaging 2085.9 microseconds
+    sse2_memcpy (movapd/movapd/prefetchnta)                  averaging 2804.25 microseconds
+    sse2_memcpy (movapd/movapd/prefetcht0)                   averaging 2393.92 microseconds
+    sse41_memcpy (movntdqa/movntdq/no prefetch)              averaging 1718.64 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetchnta)              averaging 3156.46 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetcht0)               averaging 1702.25 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/no prefetch)           averaging 2094.49 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetchnta)           averaging 2761.81 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetcht0)            averaging 2062.61 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/no prefetch)        averaging 1644.73 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetchnta)        averaging 2748.97 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetcht0)         averaging 2755.34 microseconds
+    avx_memcpy (vmovaps/vmovaps/no prefetch)                 averaging 2055.21 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetchnta)                 averaging 3631.59 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetcht0)                  averaging 3691.27 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/no prefetch)           averaging 1652.84 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetchnta)           averaging 2280.45 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetcht0)            averaging 1722.7 microseconds
+    avx512_memcpy (vmovaps/vmovaps/no prefetch)              averaging 2093.47 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetchnta)              averaging 2665.04 microseconds
+    avx512_memcpy (vmovaps/vmovaps/prefetcht0)               averaging 2187.92 microseconds
+    __movsb (intrinsic)                                      averaging 1673.91 microseconds
+
+**Broadwell i7-6800k on ASUS X99 with 24GB DDR4-2400**
+---------------------------------------------------------------------------
+Averaging 7700 copies of 16MB of data per function for operator new
+---------------------------------------------------------------------------
+
+    std::memcpy                                              averaging 2566.36 microseconds
+    asm_memcpy (asm)                                         averaging 2568.47 microseconds
+    sse_memcpy (movaps/movntps/no prefetch)                  averaging 1583.11 microseconds
+    sse_memcpy (movaps/movntps/prefetchnta)                  averaging 1637.54 microseconds
+    sse_memcpy (movaps/movntps/prefetcht0)                   averaging 1598.25 microseconds
+    sse_memcpy (movaps/movaps/no prefetch)                   averaging 2943.52 microseconds
+    sse_memcpy (movaps/movaps/prefetchnta)                   averaging 3019.87 microseconds
+    sse_memcpy (movaps/movaps/prefetcht0)                    averaging 2951.52 microseconds
+    sse2_memcpy (movapd/movntpd/no prefetch)                 averaging 1582.55 microseconds
+    sse2_memcpy (movapd/movntpd/prefetchnta)                 averaging 1942.78 microseconds
+    sse2_memcpy (movapd/movntpd/prefetcht0)                  averaging 1861.64 microseconds
+    sse2_memcpy (movapd/movapd/no prefetch)                  averaging 2940.36 microseconds
+    sse2_memcpy (movapd/movapd/prefetchnta)                  averaging 3386.16 microseconds
+    sse2_memcpy (movapd/movapd/prefetcht0)                   averaging 3312.93 microseconds
+    sse41_memcpy (movntdqa/movntdq/no prefetch)              averaging 1583.11 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetchnta)              averaging 1637.62 microseconds
+    sse41_memcpy (movntdqa/movntdq/prefetcht0)               averaging 1597.94 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/no prefetch)           averaging 2938.92 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetchnta)           averaging 3017.3 microseconds
+    sse41_memcpy(SSE2) (movdqa/movdqa/prefetcht0)            averaging 2949.18 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/no prefetch)        averaging 1617.7 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetchnta)        averaging 1630.73 microseconds
+    avx_memcpy(AVX2) (vmovntdqa/vmovntdq/prefetcht0)         averaging 1630.53 microseconds
+    avx_memcpy (vmovaps/vmovaps/no prefetch)                 averaging 2948.2 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetchnta)                 averaging 4786.47 microseconds
+    avx_memcpy (vmovaps/vmovaps/prefetcht0)                  averaging 4771.7 microseconds
+    avx512_memcpy (vmovntdqa/vmovntdq/no prefetch)           unsupported on this CPU
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetchnta)           unsupported on this CPU
+    avx512_memcpy (vmovntdqa/vmovntdq/prefetcht0)            unsupported on this CPU
+    avx512_memcpy (vmovaps/vmovaps/no prefetch)              unsupported on this CPU
+    avx512_memcpy (vmovaps/vmovaps/prefetchnta)              unsupported on this CPU
+    avx512_memcpy (vmovaps/vmovaps/prefetcht0)               unsupported on this CPU
+    __movsb (intrinsic)                                      averaging 2564.15 microseconds
